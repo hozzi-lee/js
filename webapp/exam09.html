@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>js_exam09</title>
+</head>
+
+<body>
+
+	<h1> JAVASCRIPT </h1>
+	<h2> 함수(function) </h2>
+	
+	<script>
+	// 이름이 있는 함수(기명함수, 선언적 함수) ------- 함수는 위치 상관 없이 먼저 해석
+		
+		// 함수 정의
+		/* 함수는 위치 상관 없이 먼저 해석
+		function plus(a, b) {
+			var sum = a + b;
+			
+			return sum;
+		}
+		*/
+	
+		var plusSum = plus(3, 5);
+			console.log(plusSum);
+			document.write("<h3>" + plusSum + "</h3>");
+		
+		var result01 = plus(2.7, 5.8);
+			console.log(result01);
+			document.write("<h3>" + result01 + "</h3>");
+			
+		var result02 = plus("안녕", "하세요");
+			console.log(result02);
+			document.write("<h3>" + result02 + "</h3>");
+	
+			
+		// 함수 정의
+		function plus(a, b) {
+			var sum = a + b;
+			
+			return sum;
+		}
+		
+	// 이름이 없는 함수(익명함수) -------- 이름이 없어서 바로 사용해야 한다(순서대로 해석)
+									// function 을 포함한 변수이기 때문에
+	
+		var minus = function (a, b){
+			var sum = a - b;
+			
+			return sum;
+		}
+			console.log(typeof minus);
+	
+		var result03 = minus(5, 3);
+			console.log(typeof result03);
+			console.log(result03);
+			document.write("<h3>" + result03 + "</h3>");
+		
+		var result04 = minus(5, 2.4);
+			console.log(result04);
+			document.write("<h3>" + result04 + "</h3>");
+		
+		var result05 = minus("안녕", "하세요");
+			console.log(result05); // NaN: Not-A-Number(숫자가 아님)
+			document.write("<h3>" + result05 + "</h3>"); // NaN: Not-A-Number(숫자가 아님)
+	
+	</script>
+
+</body>
+	
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>js_exam11</title>
+</head>
+
+<body>
+
+	<h1> JAVASCRIPT </h1>
+	<h2> 변수의 범위(전역변수, 지역변수) </h2>
+	<hr>
+	<br>
+	
+	<script>
+	
+	/*
+	var name = "global"; // 전역변수
+	
+	function checkScope() {
+		var name = "local"; // 지역변수
+		console.log(name);
+		document.write(name);
+	}
+	
+	checkScope(); // 함수의 지역변수 "local"
+	
+	// 전역변수 name 이 없을 경우 지역변수 name 을 출력시 오류
+	console.log(name); // 전역변수 "global"
+	document.write("<br>" + name); // 전역변수 "global"
+	*/
+	
+	var name = "global"; // 전역변수
+	
+	function checkScope() {
+		name = "local"; // 지역변수
+		name2 = "로컬"; // var 생략 ---> 함수 실행시 전역변수로 변환됨(var name2)
+		console.log(name);
+		document.write(name);
+	}
+	
+	checkScope(); // 함수의 지역변수 "local"
+	
+	// checkScope() 함수를 실행 할 경우 전역변수 name 에 지역변수 name 을 대입한다
+	console.log(name); // 전역변수 "global" 에 지역변수 "local" 대입 ---> "local"
+	document.write("<br>" + name); // 전역변수 "global" 에 지역변수 "local" 대입 ---> "local"
+	
+	// checkScope() 함수를 실행 할 경우 데이터에 자료형(var)을 설정하지 않으면 전역변수로 정의된다
+	document.write("<br>============================<br>");
+	console.log(name2); // 지역변수("로컬") ---> 전역변수변환 "로컬"
+	document.write(name2); // 지역변수("로컬") ---> 전역변수변환 "로컬"
+	
+	</script>
+
+</body>
+	
+
+</html>

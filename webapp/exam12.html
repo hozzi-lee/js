@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>js_exam12</title>
+</head>
+
+<body>
+
+	<h1> JAVASCRIPT </h1>
+	<h2> 배열(array) </h2>
+	<hr>
+	<br>
+	
+	<script>
+		console.log("=============배열(array)")
+		
+		var array = [];
+		
+			array[0] = 1;
+			array[1] = 2.5;
+			array[2] = "안녕";
+			array[4] = "hello";
+			
+			console.log(array[0]); // 1
+			document.write(array[0] + "<br>"); // 1
+			console.log(array); // [1] - 하나일때 / [1, 2.5, "안녕"] - 두개 이상일때 / [1, 2.5, "안녕", empty, "hello"] - 중간에 값이 비어있을때
+			document.write(array + "<br>"); // 1,2.5,안녕 / 1,2.5,안녕,,hello
+			console.log(array[3]) // undefined
+			document.write(array[3]) // undefined
+		
+		console.log("========================================")
+		document.write("<br>========================================<br>")
+		
+		var array00 = [273, 32, 1.55, "안녕", "Hi"];
+		
+			console.log(array00);
+			document.write(array00);
+			
+			array00[5] = 52;
+			console.log(array00);
+			
+			array00.push(100); // 배열의 마지막에 값 추가
+			console.log(array00);
+			
+			array00[2] = 52; // 값을 덮어씌운다(대입) 1.55 --> 52
+			console.log(array00);
+			
+			array00.pop(); // 마지막 배열값 삭제
+			console.log(array00);
+		
+			for (var i = 0; i < array00.length; i++) {
+				console.log(array00[i]);
+			}
+		
+		console.log("========================================")
+		document.write("<br>========================================<br>")
+		
+		var sum2 = function() {
+			return 3 + 4;
+		}
+		
+		var array01 = [273, 1.29, "안녕", 3>2, sum, sum, sum(), sum(1, 1), sum2, sum2(),
+						function(){return "익명함수"}, [11, 22, 33]];
+		
+			console.log(array01[0]);
+			console.log(array01[1]);
+			console.log(array01[2]);
+			console.log(array01[3]);
+			console.log(array01[4]); // sum --> 함수 코드 출력
+			console.log(array01[5](1, 1)); // sum --> return값(sum) 2
+			console.log(array01[6]); // sum() --> NaN
+			console.log(array01[7]); // sum(1, 1) --> return값(sum) 2
+			console.log(array01[8]); // sum2 --> 함수 코드 출력
+			console.log(array01[9]); // sum2() --> return값(3+4) 7
+			console.log(array01[10]); // 익명함수 코드 출력
+			console.log(array01[10]()); // 익명함수 return값("익명함수") --> 익명함수
+			console.log(array01[11]); // [11, 22, 33]
+			console.log(array01[11][0]); // 11
+			console.log(array01[11][1]); // 22
+			console.log(array01[11][2]); // 33
+		
+		function sum(a, b) {
+			var sum = a + b;
+			return sum;
+		}
+		
+	</script>
+	
+</body>
+	
+
+</html>

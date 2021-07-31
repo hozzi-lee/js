@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>js_exam10</title>
+</head>
+
+<body>
+
+	<h1> JAVASCRIPT </h1>
+	<h2> 함수(function) 우선순위 </h2>
+	<hr>
+	<br>
+	
+	<script>
+	// 함수 우선 순위 확인
+	
+		// (2) 변수에 익명함수 대입
+		var test = function() {
+			console.log("test 익명 함수 입니다");
+			document.write("test 익명 함수 입니다");
+		}
+		
+		// (1) 기명함수 먼저 해석
+		function test() {
+			console.log("test 기명 함수 입니다");
+			document.write("test 기명 함수 입니다");
+		}
+		
+		// (3) 실행
+		test(); // 익명함수 출력
+	
+	</script>
+
+</body>
+	
+
+</html>

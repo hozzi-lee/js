@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>js_exam13</title>
+</head>
+
+<body>
+
+	<h1> JAVASCRIPT </h1>
+	<h2> 객체 </h2>
+	<hr>
+	<br>
+	
+	<script>
+		var guestbookVo = {
+			name: "이호진",
+			password: "1234",
+			content: "안녕 나는 호진",
+			showInfo: function() {
+				console.log("guestbookVo [이름= " + this.name + ", 비밀번호= " + this.password + ", 내용= " + this.content + "]");
+				document.write("guestbookVo [이름= " + this.name + ", 비밀번호= " + this.password + ", 내용= " + this.content + "]");
+			}
+		}
+		console.log(guestbookVo); // guestbookVo 코드 출력
+		console.log(guestbookVo.name); // guestbookVo 내부 name값 출력
+		console.log(guestbookVo.password); // guestbookVo 내부 password값 출력
+		console.log(guestbookVo.content); // guestbookVo 내부 content값 출력
+		console.log(guestbookVo.showInfo); // guestbookVo 내부 showInfo 함수 코드 출력
+		guestbookVo.showInfo(); // guestbookVo 내부 showInfo 함수의 return값 출력
+		
+		var teacher = guestbookVo.name;
+			console.log(teacher);
+		
+		var teacher2 = guestbookVo["name"];
+			console.log(teacher2);
+			
+		// guestbookVo.name(); 함수가 아니여서 오류
+		
+	</script>
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	
+	<h2> 객체 + 배열 </h2>
+	<hr>
+	<br>
+	
+	<script>
+		
+		console.log("=========================연습=========================");
+	
+		var guestbookVoPractice = {
+				name: ["이호진[0]", "이호진[1]", "이호진[2]"],
+				hp: ["010-0000-0000", "010-1111-1111", "010-2222-2222"],
+				company: ["02-000-000", "02-111-111", "02-222-222"],
+				showInfo: function() {
+					for (var i = 0; i < this.name.length; i++) {
+						console.log("guestbookVo [name= " + this.name[i] + ", hp= " + this.hp[i] + ", company= " + this.company[i] + "]");
+						document.write("guestbookVo [name= " + this.name[i] + ", hp= " + this.hp[i] + ", company= " + this.company[i] + "]<br>");
+					}
+				}
+		}
+		
+		guestbookVoPractice.showInfo();
+		console.log(guestbookVoPractice);
+		console.log(guestbookVoPractice.name[0]);
+		console.log(guestbookVoPractice.name[1]);
+		console.log(guestbookVoPractice.name[2]);
+		console.log(guestbookVoPractice.name);
+		
+		for (var i = 0; i < guestbookVoPractice.name.length; i++) {
+			console.log(guestbookVoPractice.name[i]);
+			console.log(guestbookVoPractice.hp[i]);
+			console.log(guestbookVoPractice.company[i]);
+		}
+		
+		console.log("=========================수업=========================");
+		
+		var person01 = {
+				name: "이호진",
+				hp: "010-1111-1111",
+				company: "02-1111-1111"
+		}
+		
+		var person02 = {
+				name: "정우성",
+				hp: "010-2222-2222",
+				company: "02-2222-2222"
+		}
+		
+		var person03 = {
+				name: "원빈",
+				hp: "010-3333-3333",
+				company: "02-3333-3333"
+		}
+		
+		var personList = [person01, person02, person03];
+			console.log(personList);
+		
+		var personList2 = [];
+			personList2[0] = person01;
+			personList2[1] = person02;
+			
+			personList2.push(person03);
+			console.log(personList2);
+			
+			/* personList2.pop();
+			console.log(personList2); */
+		
+		for (var i = 0; i < personList2.length; i++) {
+			console.log(personList[i].name);
+			console.log(personList[i].hp);
+		}
+	
+	</script>
+
+</body>
+
+
+
+</html>

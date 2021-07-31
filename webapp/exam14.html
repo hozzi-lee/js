@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+
+	<script>
+	// window.onload == 해당 페이지가 브라우저에서 열리고 해석 한 후에 function() 실행
+	// window.onload 가 없을시 해당 위치에서 실행 불가능 ---> <body> 뒤쪽으로 <script>를 이동 해야 함
+		window.onload = function() {
+			// tag의 id 값으로 가져오기
+			var testButton = document.getElementById("btn");
+			var testArea = document.getElementById("display");
+			var testHeader = document.getElementById("header");
+			
+				console.log(testButton); // typeof == object
+				console.log(testArea); // typeof == object
+				
+			// tag의 이름 으로 가져오기
+			var tagH3Array = document.getElementsByTagName("h3");
+			
+			var tagH1Array = document.getElementsByTagName("h1");
+				
+				console.log(testHeader); // typeof == object
+				console.log(tagH3Array); // typeof == object
+			
+			// tag의 class 값으로 가져오기
+			var tagH4Array = document.getElementsByClassName("tagH4");
+
+				console.log(tagH4Array); // typeof == object
+				
+// getElements 는 배열로 저장된다
+
+			// button이 아닌 tag에도 onclick 적용 가능
+			tagH3Array[1].onclick = function() {
+				testArea.innerHTML = "아저씨 _ 원빈";
+				tagH3Array[0].innerHTML = "나는";
+				tagH4Array[0].innerHTML = "이호진";
+				tagH4Array[1].innerHTML = "이용";
+			}
+
+			tagH4Array[4].onclick = function() {
+				// tagHeader[0].innerHTML = "https://www.daum.net";
+				testHeader.innerHTML = '<a href="https://www.daum.net" target="_blank">https://www.daum.net</a>';
+			}
+			
+			// button에 onclick 적용
+			testButton.onclick = function() {
+				testArea.innerHTML = "홍길동";
+				tagH3Array[0].innerHTML = "나는";
+				tagH4Array[0].innerHTML = "이호진";
+				tagH4Array[1].innerHTML = "이용";
+			}
+			
+		}
+	</script>
+
+
+<title>js_exam14</title>
+</head>
+
+<body>
+
+	<h1 id="header"> JAVASCRIPT </h1>
+	<h2 class="tagH4"> 이벤트 </h2>
+	<hr>
+	
+	<h3>h3태그 _ 1</h3>
+	<h3>h3태그 _ 2</h3>
+	<h3>h3태그 _ 3</h3>
+	
+	<h4 class="tagH4">h4태그 _ 1</h4>
+	<h4 class="tagH4">h4태그 _ 2</h4>
+	<h4 class="tagH4">네이버</h4>
+	<h4 class="tagH4">다음 카카오</h4>
+
+	<div>
+		<button id="btn">자바스크립트 테스트 버튼</button>
+		<p id="display">이름출력영역</p>
+	</div>
+	
+</body>
+
+<!--
+	// window.onload == 해당 페이지가 브라우저에서 열리고 해석 한 후에 function() 실행
+	// window.onload 가 없을시 해당 위치에서 실행 불가능 ----- <body> 뒤쪽으로 <script>를 이동 해야 함 
+	<script>
+	
+			var testButton = document.getElementById("btn");
+			var testArea = document.getElementById("display");
+			
+			testButton.onclick = function() {
+				testArea.innerHTML = "홍길동";
+				
+			}
+			
+	</script>
+-->
+
+<!-- html-js
+m = data (tag)
+v = view (css)
+c = control(js)
+-->
+ 
+<!-- java-servlet
+m = data (model)
+v = view (jsp)
+c = control(@Controller)
+-->
+
+</html>
