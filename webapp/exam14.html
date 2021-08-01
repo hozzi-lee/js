@@ -42,6 +42,7 @@
 			tagH4Array[4].onclick = function() {
 				// tagHeader[0].innerHTML = "https://www.daum.net";
 				testHeader.innerHTML = '<a href="https://www.daum.net" target="_blank">https://www.daum.net</a>';
+				alert('test practice');
 			}
 			
 			// button에 onclick 적용
@@ -83,7 +84,7 @@
 
 <!--
 	// window.onload == 해당 페이지가 브라우저에서 열리고 해석 한 후에 function() 실행
-	// window.onload 가 없을시 해당 위치에서 실행 불가능 ----- <body> 뒤쪽으로 <script>를 이동 해야 함 
+	// window.onload 가 없어도 해당 위치에서 실행 가능 ----- 필요한 경우 == <body> 앞쪽에서 <script>를 실행 할 때 
 	<script>
 	
 			var testButton = document.getElementById("btn");
