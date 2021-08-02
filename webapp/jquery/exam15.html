@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/js/assets/js/jquery/jquery-1.12.4.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+
+	<ul>
+		<li id="first" class="red">첫번째 아이템입니다.</li>
+		<li id="second" class="blue"><strong>두번째 아이템입니다.</strong></li>
+		<li id="third" class="del">세번째아이템입니다.</li>
+		<li><strong>네번째 아이템입니다.</strong></li>
+
+	</ul>
+	<button id="btn" type="button">li요소추가</button>
+
+</body>
+
+<script>
+
+	// click - li추가 함수
+	$('#btn').on('click', function(){
+		$('ul').append('<li id="fiveth">다섯번째 아이템 입니다</li>');
+		$('ul').append('<li id="sixth">여섯번째 아이템 입니다</li>');
+		$('ul').append('<li id="seventh">일곱번째 아이템 입니다</li>');
+	});
+	
+	/*
+	// 위의 함수로 추가된 li태그에는 적용되지 않는다
+	$('li').on('click', function(){
+		console.log($(this));
+	});
+	*/
+	
+	// 함수로 추가된 li는 해석(구조화)이 안된 상태이기 때문에 부모태그(ul)를 통해서 자식태그(li)로 위임한다
+	$('ul').on('click', 'li', function(){
+		console.log($(this));
+		$(this).html('이호진');
+	});
+	
+</script>
+
+</html>

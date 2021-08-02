@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/js/assets/js/jquery/jquery-1.12.4.js"></script>
+
+<title>Insert title here</title>
+</head>
+
+<body>
+	<p id="p1">abcdefghijklmn</p>
+	<p id="p2">
+		학교종이 땡땡땡<br>
+		abcdefg
+	</p>
+	<p id="p3">abcdefghijklmn</p>
+</body>
+
+<script>
+
+	// .html('') == 바꾸고 싶은 값에 html에 적용하기
+	$('#p1').html('<strong>가나다</strong> 라마바사'); // 가나다 라마바사
+	// .text('') 비교
+	$('#p3').text('<strong>가나다</strong> 라마바사'); // <strong>가나다</strong> 라마바사
+
+	
+	// .html() == tag포함 읽어온다
+	var str = $('#p2').html(); // 학교종이 땡땡땡<br> abcdefg
+	console.log(str);
+	// .text() 비교
+	var str2 = $('#p2').text(); // 학교종이 땡땡땡 abcdefg
+	console.log(str2);
+
+</script>
+
+</html>

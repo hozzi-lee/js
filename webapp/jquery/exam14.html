@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/js/assets/js/jquery/jquery-1.12.4.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+
+	<ul>
+		<li id="first" class="red">첫번째 아이템입니다.</li><br>
+		<li id="second" class="blue"><strong>두번째 아이템입니다.</strong></li><br>
+		<li id="third" class="del">세번째아이템입니다.</li><br>
+		<li><strong>네번째 아이템입니다.</strong></li>
+	</ul>
+
+</body>
+
+<script>
+
+	/*
+	$('#first').on('click', function(){
+		console.log('id=first click');
+	});
+	
+	$('#second').on('click', function(){
+		console.log('id=second click');
+	});
+	*/
+	
+	// $(this) == 해당 this를 포함한 메서드에 대한 값 == li태그 중 클릭한 값에 대한 함수 실행
+	$('li').on('click', function(){
+		// console.log('li click');
+		// console.log($(this));
+		
+		// 클릭한 값의 내용 바꾸기
+		$(this).html('이호진');
+		
+		// .attr('selecter') == 클릭한 값의 selecter값 읽어오기
+		console.log($(this).attr('id'));
+		console.log($(this).attr('class'));
+	});
+	
+</script>
+
+</html>

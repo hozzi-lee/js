@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/js/assets/js/jquery/jquery-1.12.4.js"></script>
+
+<title>Insert title here</title>
+</head>
+
+<body>
+	<ul>
+		<li class="first">텍스트1 텍스트1 텍스트1 텍스트1 텍스트1</li>
+		<li class="second">텍스트2 텍스트2 텍스트2 텍스트2 텍스트2</li>
+		<li>텍스트 텍스트 텍스트 텍스트 텍스트</li>
+		<li class="first">텍스트1 텍스트1 텍스트1 텍스트1 텍스트1</li>
+		<li class="second">텍스트2 텍스트2 텍스트2 텍스트2 텍스트2</li>
+		<li>텍스트 텍스트 텍스트 텍스트 텍스트</li>
+		<li class="first">텍스트1 텍스트1 텍스트1 텍스트1 텍스트1</li>
+		<li class="second">텍스트2 텍스트2 텍스트2 텍스트2 텍스트2</li>
+		<li>텍스트 텍스트 텍스트 텍스트 텍스트</li>
+		<li class="first">텍스트1 텍스트1 텍스트1 텍스트1 텍스트1</li>
+		<li class="second">텍스트2 텍스트2 텍스트2 텍스트2 텍스트2</li>
+		<li>텍스트 텍스트 텍스트 텍스트 텍스트</li>
+	</ul>
+</body>
+
+<script>
+
+	// class를 갖고 있는 모든 태그 불러오기
+	// $('.first, .second').css('color', 'red'); XXXXXXXXXXXXXXX
+	$('[class]').css('color', 'red');
+	$('[class=first]').css('color', 'blue'); // or $('[class="first"]')
+	$('ul > li[class=second]').css('color', 'green');
+	
+
+</script>
+
+</html>

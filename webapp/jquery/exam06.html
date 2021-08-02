@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/js/assets/js/jquery/jquery-1.12.4.js"></script>
+
+<title>Insert title here</title>
+</head>
+
+<body>
+	<p id="p1">abcdefghijklmn</p>
+	<p id="p2">학교종이 땡땡땡 abcdefg</p>
+	<p id="p3">학교종이 땡땡땡 <strong>abcdefg</strong></p>
+</body>
+
+<script>
+
+	// $('select').text() == select에 해당하는 값 읽어오기
+	var str = $('#p1').text();
+	
+	// 출력하기
+	console.log(str);
+	
+	// 읽어온 값 바꾸기
+	$('#p1').text('가나다라마바사');
+	
+	// .text('')에 tag설정 불가능 --> .html() 사용
+	$('#p2').text('가나다라 <h2>마바사</h2>');
+
+	// 해당 id 내부에 다른 tag가 존재 할 시 tag를 뺀 text만 읽어온다
+	var str = $('#p3').text(); // 학교종이 땡땡땡 <strong>abcdefg</strong>
+	console.log(str); // 학교종이 땡땡땡 abcdefg
+
+</script>
+
+</html>
